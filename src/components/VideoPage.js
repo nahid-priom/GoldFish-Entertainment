@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import video from "../assets/1.mp4";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
+import { faTimesCircle } from "@fortawesome/free-solid-svg-icons/faTimesCircle";
 
 const VideoPage = () => {
   const [showPopup, setShowPopup] = useState(false); // State to control popup visibility
-  const navigate = useNavigate();
+
 
   const relatedVideos = [
     {
@@ -112,13 +115,13 @@ const VideoPage = () => {
           className="bg-red-900 text-white px-6 py-2 rounded-lg shadow-md hover:bg-red-800 transition duration-200"
           onClick={redirectToYouTube}
         >
-          <i className="fas fa-play-circle mr-2"></i> Watch Now
+            <FontAwesomeIcon icon={faPlayCircle} className="mr-2" /> Watch Now
         </button>
         <button
           className="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg shadow-md hover:bg-gray-400 transition duration-200"
           onClick={() => setShowPopup(false)}
         >
-          <i className="fas fa-times-circle mr-2"></i> Close
+           <FontAwesomeIcon icon={faTimesCircle} className="mr-2" /> Close
         </button>
       </div>
     </div>
