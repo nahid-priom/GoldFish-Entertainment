@@ -3,14 +3,11 @@ import { Helmet } from 'react-helmet-async';
 
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
-import RecentWorkSection from "../components/RecentWork";
-import ServiceSection from "../components/ServicesSection";
-import ClientTestimonials from "../components/ClientTestmonials";
+
 import Footer from "../components/Footer";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import CategorySection from '../components/CategorySection';
-import GoogleMap from "../components/GoogleMap"
+import TrendingVideos from '../components/TrendingVideo';
 
 
 const Home = () => {
@@ -47,7 +44,7 @@ const Home = () => {
     <div className="w-full">
       {/* SEO Meta Tags */}
       <Helmet>
-        <title>{seoData.seo_title}</title>
+        <title>Gold Fish Entertainment</title>
         <meta name="description" content={seoData.seo_description} />
       </Helmet>
 
@@ -58,12 +55,10 @@ const Home = () => {
       {/* Page Content */}
       <Navbar />
       <HeroSection />
+      <TrendingVideos/>
       
-      <CategorySection />
-      <ServiceSection />
-      <RecentWorkSection />
-      <ClientTestimonials />
-      <GoogleMap />
+      
+     
       <Footer />
     </div>
   );
