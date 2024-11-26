@@ -122,7 +122,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-400">
+        <div className="mt-8 border-t border-white pt-4 text-center text-sm text-white">
           <p>
             &copy; {new Date().getFullYear()} GoldFish Entertainment. All rights
             reserved.
